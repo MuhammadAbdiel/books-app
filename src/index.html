@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dicoding Books</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark bg-primary">
+      <div class="container py-0">
+        <span class="navbar-brand mb-0 h1">Dicoding Books</span>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title m-0">Input Buku</h5>
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <label for="inputBookId">ID Buku</label>
+              <input id="inputBookId" type="number" class="form-control" placeholder="ID Buku">
+            </div>
+            <div class="form-group">
+              <label for="inputBookTitle">Judul Buku</label>
+              <input id="inputBookTitle" type="text" class="form-control" placeholder="Judul Buku">
+            </div>
+            <div class="form-group">
+              <label for="inputBookAuthor">Pengarang</label>
+              <input id="inputBookAuthor" type="text" class="form-control" placeholder="Pengarang">
+            </div>
+            <div class="form-group">
+              <button id="buttonSave" class="btn btn-success">Save</button>
+              <button id="buttonUpdate" class="btn btn-primary">Update</button>
+              <button id="buttonEmpty" class="btn btn-secondary">Empty Form</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="listBook" class="row"></div>
+  </main>
+</body>
+
+</html>
