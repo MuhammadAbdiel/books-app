@@ -16,13 +16,17 @@ function main() {
       })
       .then((responseJson) => {
         if (responseJson.error) {
-          showResponseMessage(responseJson.message, "error", "Error");
+          showResponseMessage(
+            responseJson.message,
+            "error",
+            "Something went wrong!"
+          );
         } else {
           renderAllBooks(responseJson.books);
         }
       })
       .catch((error) => {
-        showResponseMessage(error, "error", "Error");
+        showResponseMessage(error, "error", "Something went wrong!");
       });
 
     // // membuat instance dari XMLHttpRequest
@@ -31,7 +35,7 @@ function main() {
     // xhr.onload = function () {
     //   const responseJson = JSON.parse(this.responseText);
     //   if (responseJson.error) {
-    //     showResponseMessage(responseJson.message, "error", "Error");
+    //     showResponseMessage(responseJson.message, "error", "Something went wrong!");
     //   } else {
     //     renderAllBooks(responseJson.books);
     //   }
@@ -59,15 +63,23 @@ function main() {
       })
       .then((responseJson) => {
         if (responseJson.error) {
-          showResponseMessage(responseJson.message, "error", "Error");
+          showResponseMessage(
+            responseJson.message,
+            "error",
+            "Something went wrong!"
+          );
         } else {
-          showResponseMessage(responseJson.message, "success", "Success");
+          showResponseMessage(
+            responseJson.message,
+            "success",
+            "Task was successful!"
+          );
         }
 
         getBook();
       })
       .catch((error) => {
-        showResponseMessage(error, "error", "Error");
+        showResponseMessage(error, "error", "Something went wrong!");
       });
 
     // // Membuat instance dari XMLHttpRequest
@@ -75,7 +87,7 @@ function main() {
     // //menetapkan callback jika response sukses dan error
     // xhr.onload = function () {
     //   const responseJson = JSON.parse(this.responseText);
-    //   showResponseMessage(responseJson.message, "success", "Success");
+    //   showResponseMessage(responseJson.message, "success", "Task was successful!");
     //   getBook();
     // };
     // xhr.onerror = function () {
@@ -104,15 +116,23 @@ function main() {
       })
       .then((responseJson) => {
         if (responseJson.error) {
-          showResponseMessage(responseJson.message, "error", "Error");
+          showResponseMessage(
+            responseJson.message,
+            "error",
+            "Something went wrong!"
+          );
         } else {
-          showResponseMessage(responseJson.message, "success", "Success");
+          showResponseMessage(
+            responseJson.message,
+            "success",
+            "Task was successful!"
+          );
         }
 
         getBook();
       })
       .catch((error) => {
-        showResponseMessage(error, "error", "Error");
+        showResponseMessage(error, "error", "Something went wrong!");
       });
 
     // // Membuat instance dari XMLHttpRequest
@@ -120,7 +140,7 @@ function main() {
     // //menetapkan callback jika response sukses dan error
     // xhr.onload = function () {
     //   const responseJson = JSON.parse(this.responseText);
-    //   showResponseMessage(responseJson.message, "success", "Success");
+    //   showResponseMessage(responseJson.message, "success", "Task was successful!");
     //   getBook();
     // };
     // xhr.onerror = function () {
@@ -147,15 +167,23 @@ function main() {
       })
       .then((responseJson) => {
         if (responseJson.error) {
-          showResponseMessage(responseJson.message, "error", "Error");
+          showResponseMessage(
+            responseJson.message,
+            "error",
+            "Something went wrong!"
+          );
         } else {
-          showResponseMessage(responseJson.message, "success", "Success");
+          showResponseMessage(
+            responseJson.message,
+            "success",
+            "Task was successful!"
+          );
         }
 
         getBook();
       })
       .catch((error) => {
-        showResponseMessage(error, "error", "Error");
+        showResponseMessage(error, "error", "Something went wrong!");
       });
 
     // // Membuat instance dari XMLHttpRequest
@@ -163,7 +191,7 @@ function main() {
     // //menetapkan callback jika response sukses dan error
     // xhr.onload = function () {
     //   const responseJson = JSON.parse(this.responseText);
-    //   showResponseMessage(responseJson.message, "success", "Success");
+    //   showResponseMessage(responseJson.message, "success", "Task was successful!");
     //   getBook();
     // };
     // xhr.onerror = function () {
@@ -188,8 +216,8 @@ function main() {
             <div class="card-body">
               <h5>(${book.id}) ${book.title}</h5>
               <p>${book.author}</p>
-              <button type="button" class="btn btn-warning button-edit" data-title="${book.title}" data-author="${book.author}" id="${book.id}">Edit</button>
-              <button type="button" class="btn btn-danger button-delete" id="${book.id}">Hapus</button>
+              <button type="button" class="btn btn-warning button-edit" data-title="${book.title}" data-author="${book.author}" id="${book.id}"><i class="fa-solid fa-pen-to-square"></i>&nbsp; Edit</button>
+              <button type="button" class="btn btn-danger button-delete" id="${book.id}"><i class="fa-solid fa-trash-can"></i>&nbsp; Hapus</button>
             </div>
           </div>
         </div>
@@ -206,6 +234,8 @@ function main() {
           text: "You won't be able to revert this!",
           icon: "warning",
           showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
           confirmButtonText: "Yes, delete it!",
         }).then((result) => {
           if (result.isConfirmed) {
@@ -256,6 +286,7 @@ function main() {
       icon: icon,
       title: title,
       text: message,
+      confirmButtonColor: "#3085d6",
     });
   };
 
